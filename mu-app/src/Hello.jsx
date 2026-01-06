@@ -1,5 +1,5 @@
-function Hello({ name }) {
-    return <h1>Hello, {name}!</h1>;
+function Hello({ sir, name }) {
+    return <h1>{sir}, {name}!</h1>;
     }
 
 export default Hello;
