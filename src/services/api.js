@@ -1,22 +1,3 @@
-# Learn React
-
-- goto directory where package.json exists
-
-npm install
-
-# Run the project
-
-npm run dev -- --host
-
-# build for production
-
-npm run build
-
-# Preview
-
-npm run preview
-
-## install LTS Node
 const API_KEY = "";
 const BASE_URL = "https://api.themoviedb.org/3";
 
