@@ -6,7 +6,8 @@ import './App.css'
 import Hello from "./Hello";
 import Counter from "./Counter";
 import Counter2 from "./Counter2";
-import Dynadis from "./Dynadis";
+import TodoApp from "./TodoApp";
+import Posts from "./Posts";
 
 function App() {
   return (
@@ -18,8 +19,9 @@ function App() {
 
       {/* Counter component */}
       {/* <Counter /> */}
-      <Counter2 />
-      <Dynadis />
+      {/* <Counter2 /> */}
+      <TodoApp />
+      <Posts />
     </div>
     );
 }
