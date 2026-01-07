@@ -7,6 +7,7 @@ import Hello from "./Hello";
 import Counter from "./Counter";
 import Counter2 from "./Counter2";
 import TodoApp from "./TodoApp";
+import Posts from "./Posts";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
       {/* <Counter /> */}
       {/* <Counter2 /> */}
       <TodoApp />
+      <Posts />
     </div>
     );
 }
