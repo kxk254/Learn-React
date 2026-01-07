@@ -1,7 +1,15 @@
 # Learn React
 
+## create app
+npm create vite@latest my-app -- --template react
+cd my-app
+
 - goto directory where package.json exists
 
+npm install react@18 react-dom@18
+
+-- router
+npm install react-router-dom
 npm install
 
 # Run the project
