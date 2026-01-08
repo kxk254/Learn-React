@@ -7,6 +7,7 @@ import './App.css';
 import Fetch from './pages/Fetch.jsx';
 import Home from './pages/Home.jsx';
 import About from './pages/About.jsx';
+import ThemeSwitcher from './pages/ThemeSwitcher.jsx';
 
 function App() {
   const [count, setCount] = useState(0)
@@ -29,6 +30,9 @@ function App() {
       <div className="layout">
         <div className="block">
           <Fetch />
+        </div>
+        <div className="block">
+          <ThemeSwitcher />
         </div>
 
 
