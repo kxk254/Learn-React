@@ -1,15 +1,19 @@
-import { useContext } from 'react';
+import { useEffect, useState } from 'react';
 import { ThemeContext } from './ThemeContext';
 
 function ThemeSwitcher() {
-  const { theme, setTheme } = useContext(ThemeContext);
+  const [theme, setTheme] = useState("light");
 
   const toggleTheme = () => {
     setTheme(theme === 'light' ? 'dark' : 'light');
   };
 
-  return (
-    <div style={{ background: theme === "light" ? "#fff" : "#333", color: theme === "light" ? "#000000" : "#ffffff", padding: "20px" }}>
+  useEffect(() => {
+    document.body.className = theme;
+  }, [theme]);
+
+  return (   
+    <div>
       <p>Current theme: {theme}</p>
       <button onClick={toggleTheme}>Toggle Theme</button>
     </div>
