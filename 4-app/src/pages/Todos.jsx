@@ -1,10 +1,40 @@
+import { useState } from 'react';
+
 function Todos() {
-    const todos = ["Learn React", "Build Project", "Practice Hooks"];
+    const [todos, setTodos] = useState(["Learn React", "Build Project", "Practice Hooks"]);
+    const [input, setInput] = useState("");
+
+    const addTodo = () => {
+        if (input.trim() !== "") {
+            setTodos([...todos, input]);
+            setInput("");
+        }
+    };
+
+    const deleteTodo = (index) => {
+        const newTodos = todos.filter((_, i) => i !== index);
+        setTodos(newTodos);
+    };
 
     return (
-        <ul>
-            {todos.map((todo, index) => <li key={index}>{todo}</li>)}
-        </ul>
+        <div>
+            <h2>Todo List</h2>
+            <input 
+                type="text" 
+                value={input} 
+                onChange={(e) => setInput(e.target.value)} 
+                placeholder="Add a new todo" 
+            />
+            <button onClick={addTodo}>Add</button>
+            <ul>
+                {todos.map((todo, index) => (
+                    <li key={index}>
+                        {todo} 
+                        <button onClick={() => deleteTodo(index)}>Delete</button>
+                    </li>
+                ))}
+            </ul>
+        </div>
     );
 }
 
