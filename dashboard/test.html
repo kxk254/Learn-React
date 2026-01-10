@@ -10,12 +10,29 @@
         <script type="text/jsx">
            const app = document.getElementById('app');
 
-           function Header() {
-               return <h1>Develop. Preview. Ship</h1>;
+           function createTitle(title) {
+               if (title) {
+                   return title;
+               } else {
+                return "Default Title";
+               }
+           }
+           function Header({ title}) {
+               return <h1>{title ? title:"DEFAULT"}</h1>;
+           }
+
+           function HomePage() {
+               return (
+                   <div>
+                       <Header title="React" />
+                       <Header />
+                       <p>Additional Docs</p>
+                   </div>
+               );
            }
 
            const lang = ReactDOM.createRoot(app);
-           lang.render(Header);
+           lang.render(HomePage());
         </script>
     </body>
 </html> 
