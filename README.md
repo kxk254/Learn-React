@@ -27,6 +27,7 @@ npm run build
 npm run preview
 
 # NEXT.js  ---------
+npm install -g pnpm   ##package manager
 npx create-next-app@latest my-app
 cd my-app
 npm run dev -- -H 10.66.66.4
@@ -93,3 +94,10 @@ export const searchMovies = async (query) => {
   const data = await response.json();
   return data.results;
 };
+
+## Dashboard example
+npx create-next-app@latest nextjs-dashboard --example "https://github.com/vercel/next-learn/tree/main/dashboard/starter-example" --use-pnpm
+
+pnpm i   # install the project packages
+
+pnpm exec next dev -H 10.66.66.4   # start development of server
