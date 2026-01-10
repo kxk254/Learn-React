@@ -29,7 +29,7 @@ npm run preview
 # NEXT.js  ---------
 npx create-next-app@latest my-app
 cd my-app
-npm run dev
+npm run dev -- -H 10.66.66.4
 
 npm install recharts
 npm install axios
