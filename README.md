@@ -7,6 +7,7 @@ cd my-app
 - goto directory where package.json exists
 
 npm install react@18 react-dom@18
+npm install next@latest
 
 -- router
 npm install react-router-dom
@@ -24,6 +25,54 @@ npm run build
 # Preview
 
 npm run preview
+
+# NEXT.js  ---------
+npx create-next-app@latest my-app
+cd my-app
+npm run dev
+
+npm install recharts
+npm install axios
+npm install @tanstack/react-query
+
+# -----------
+🧠 Mental model (important)
+Thing	Who handles it
+Routing	Next.js
+React versions	Next.js
+SSR / SSG	Next.js
+Charts	Recharts
+State	You
+
+app/
+│
+├── layout.jsx          # Root layout (HTML, body, providers)
+├── page.jsx            # Home route "/"
+├── globals.css
+│
+├── dashboard/
+│   └── page.jsx        # "/dashboard"
+│
+├── api/                # Route handlers (backend)
+│   └── posts/route.js
+│
+├── components/         # Reusable UI components
+│   ├── Header.jsx
+│   ├── Chart.jsx
+│
+├── features/           # Feature-based grouping (recommended)
+│   └── analytics/
+│       ├── AnalyticsChart.jsx
+│       ├── analyticsService.js
+│
+├── hooks/              # Custom hooks
+│   └── useWindowSize.js
+│
+├── lib/                # Utilities, helpers
+│   └── fetcher.js
+│
+└── providers/
+    └── ReactQueryProvider.jsx
 
 ## install LTS Node
 const API_KEY = "";
