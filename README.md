@@ -10,6 +10,7 @@ npm install react@18 react-dom@18
 
 -- router
 npm install react-router-dom
+npm install recharts
 npm install
 
 # Run the project
