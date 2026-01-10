@@ -96,6 +96,10 @@ export const searchMovies = async (query) => {
 };
 
 ## Dashboard example
+
+https://nextjs.org/learn/dashboard-app/optimizing-fonts-images
+
+
 npx create-next-app@latest nextjs-dashboard --example "https://github.com/vercel/next-learn/tree/main/dashboard/starter-example" --use-pnpm
 
 pnpm i   # install the project packages
