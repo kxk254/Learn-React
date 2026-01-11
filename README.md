@@ -105,3 +105,9 @@ npx create-next-app@latest nextjs-dashboard --example "https://github.com/vercel
 pnpm i   # install the project packages
 
 pnpm exec next dev -H 10.66.66.4   # start development of server
+
+#### prisma for database
+npx prisma init --db
+
+#### DRIZZLE
+https://orm.drizzle.team/docs/get-started/postgresql-new
